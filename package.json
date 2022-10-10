@@ -9,10 +9,8 @@
     "web": "expo start --web"
   },
   "dependencies": {
-    "@expo/webpack-config": "^0.17.0",
     "@reduxjs/toolkit": "^1.8.6",
-    "@rneui/base": "^4.0.0-rc.6",
-    "@rneui/themed": "^4.0.0-rc.6",
+    "@rneui/base": "github:react-native-elements/react-native-elements#base",
     "expo": "~46.0.13",
     "expo-status-bar": "~1.4.0",
     "react": "18.0.0",
@@ -25,7 +23,8 @@
     "twrnc": "^3.4.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9"
+    "@babel/core": "^7.12.9",
+    "@expo/webpack-config": "^0.17.2"
   },
   "private": true
 }
