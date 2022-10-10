@@ -1,6 +1,5 @@
-import { Image, Text, TouchableOpacity, View } from "react-native";
+import { Image, Text, TouchableOpacity, View, FlatList } from "react-native";
 import React from "react";
-import { FlatList } from "react-native-web";
 import tw from "twrnc";
 
 const data = [
