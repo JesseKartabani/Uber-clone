@@ -3,6 +3,7 @@ import React from "react";
 import tw from "twrnc";
 import Map from "../components/Map";
 import NavigateCard from "../components/NavigateCard";
+import RideOptionsCard from "../components/RideOptionsCard";
 import MapView from "react-native-maps";
 import { createStackNavigator } from "@react-navigation/stack";
 
@@ -20,6 +21,13 @@ const MapScreen = () => {
           <Stack.Screen
             name="NavigateCard"
             component={NavigateCard}
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="RideOptionsCard"
+            component={RideOptionsCard}
             options={{
               headerShown: false,
             }}
