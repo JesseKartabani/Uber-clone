@@ -27,3 +27,10 @@ git clone https://github.com/JesseKartabani/Uber-clone.git
 cd uber-clone
 npm install
 ~~~
+
+To start a development enviroment use the following command
+
+~~~npm
+npm start
+~~~
+
