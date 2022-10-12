@@ -5,6 +5,8 @@ import tw from "twrnc";
 import { Icon } from "@rneui/base";
 import { useNavigation } from "@react-navigation/native";
 import { FlatList } from "react-native-gesture-handler";
+import { useSelector } from "react-redux";
+import { selectTravelTimeInformation } from "../slices/navSlice";
 
 const data = [
   {
@@ -30,6 +32,7 @@ const data = [
 const RideOptionsCard = () => {
   const navigation = useNavigation();
   const [selected, setSelected] = useState(null);
+  const travelTimeInformation = useSelector(selectTravelTimeInformation);
 
   return (
     <SafeAreaView style={tw`bg-white flex-grow`}>
@@ -43,7 +46,7 @@ const RideOptionsCard = () => {
 
         <TouchableOpacity
           disabled={!selected}
-          style={tw`bg-black py-3 w-60 ml-auto mr-auto object-center mb-5 -mt-5 ${
+          style={tw`bg-black py-3 w-60 ml-auto mr-auto mb-5 -mt-5 ${
             !selected && "bg-gray-300"
           }`}
         >
@@ -73,7 +76,7 @@ const RideOptionsCard = () => {
             />
             <View style={tw`-ml-6`}>
               <Text style={tw`text-xl font-semibold`}>{title}</Text>
-              <Text>Travel time...</Text>
+              <Text>{travelTimeInformation?.duration.text} Travel Time</Text>
             </View>
             <Text style={tw`text-xl`}>$99</Text>
           </TouchableOpacity>
