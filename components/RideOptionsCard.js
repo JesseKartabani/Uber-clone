@@ -61,6 +61,7 @@ const RideOptionsCard = () => {
               <Text>{title}</Text>
               <Text>Travel time...</Text>
             </View>
+            <Text style={tw`text-xl`}>$99</Text>
           </TouchableOpacity>
         )}
       />
