@@ -10,7 +10,7 @@ const data = [
   {
     id: "Uber-X-1",
     title: "UberX",
-    multiplier: 1,
+    multiplier: 1, // For Price
     image: "https://links.papareact.com/3pn",
   },
   {
@@ -42,7 +42,15 @@ const RideOptionsCard = () => {
         <Text style={tw`text-center py-5 text-xl`}>Select a Ride</Text>
       </View>
 
-      <FlatList />
+      <FlatList
+        data={data}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => (
+          <TouchableOpacity>
+            <Text>Car</Text>
+          </TouchableOpacity>
+        )}
+      />
     </View>
   );
 };
