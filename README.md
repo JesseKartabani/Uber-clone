@@ -28,13 +28,13 @@ cd uber-clone
 npm install
 ~~~
 
-To start a development enviroment use the following command
+To start a development enviroment use the following command.
 
 ~~~npm
 npm start
 ~~~
 
-If you want to add your own API key do so by creating a .env file inside of the uber-clone folder
+If you want to add your own API key do so by creating a .env file inside of the uber-clone folder.
 
 ~~~js
 // Inside .env file
