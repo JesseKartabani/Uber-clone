@@ -24,4 +24,6 @@ Alternatively you can download the code as a .zip file and extract it.
 
 ~~~git
 git clone https://github.com/JesseKartabani/Uber-clone.git
+cd uber-clone
+npm install
 ~~~
