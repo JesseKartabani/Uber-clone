@@ -54,6 +54,12 @@ const RideOptionsCard = () => {
             Choose {selected?.title}
           </Text>
         </TouchableOpacity>
+
+        <Text
+          style={tw`absolute left-5 z-50 pb-5 rounded-full -mt-1 ml-76 font-semibold`}
+        >
+          {travelTimeInformation?.distance.text}
+        </Text>
       </View>
 
       <FlatList
