@@ -55,6 +55,10 @@ const RideOptionsCard = () => {
               }}
               source={{ uri: image }}
             />
+            <View>
+              <Text>{title}</Text>
+              <Text>Travel time...</Text>
+            </View>
           </TouchableOpacity>
         )}
       />
