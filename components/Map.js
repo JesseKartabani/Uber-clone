@@ -28,7 +28,7 @@ const Map = () => {
 
   // Travel time calculation
   useEffect(() => {
-    if (!origin || destination) return;
+    if (!origin || !destination) return;
 
     const getTravelTime = async () => {
       fetch(`https://maps.googleapis.com/maps/api/distancematrix/json?
@@ -38,6 +38,8 @@ const Map = () => {
           dispatch(setTravelTimeInformation(data.rows[0].elements[0]));
         });
     };
+
+    getTravelTime();
   }, [origin, destination, GOOGLE_MAPS_APIKEY]);
 
   return (
