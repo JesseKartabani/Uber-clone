@@ -61,7 +61,7 @@ const RideOptionsCard = () => {
         <Text
           style={tw`absolute left-5 z-50 pb-5 rounded-full -mt-1 ml-76 font-semibold`}
         >
-          {travelTimeInformation?.distance.text}
+          {travelTimeInformation?.distance?.text}
         </Text>
       </View>
 
@@ -85,7 +85,7 @@ const RideOptionsCard = () => {
             />
             <View style={tw`-ml-6`}>
               <Text style={tw`text-xl font-semibold`}>{title}</Text>
-              <Text>{travelTimeInformation?.duration.text} Travel Time</Text>
+              <Text>{travelTimeInformation?.duration?.text} Travel Time</Text>
             </View>
 
             {/* Ride pricing calculations */}
