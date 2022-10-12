@@ -42,7 +42,10 @@ const RideOptionsCard = () => {
         </TouchableOpacity>
 
         <TouchableOpacity
-          style={tw`bg-black py-3 w-60 ml-auto mr-auto object-center mb-5 -mt-5`}
+          disabled={!selected}
+          style={tw`bg-black py-3 w-60 ml-auto mr-auto object-center mb-5 -mt-5 ${
+            !selected && "bg-gray-300"
+          }`}
         >
           <Text style={tw`text-center text-white text-xl`}>
             Choose {selected?.title}
