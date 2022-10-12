@@ -34,3 +34,10 @@ To start a development enviroment use the following command
 npm start
 ~~~
 
+If you want to add your own API key do so by creating a .env file inside of the uber-clone folder
+
+~~~js
+// Inside .env file
+GOOGLE_MAPS_APIKEY=yourKeyGoesHere
+~~~
+
