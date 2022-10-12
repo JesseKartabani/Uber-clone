@@ -32,15 +32,22 @@ const RideOptionsCard = () => {
   const [selected, setSelected] = useState(null);
 
   return (
-    <View style={tw`bg-white flex-grow`}>
+    <SafeAreaView style={tw`bg-white flex-grow`}>
       <View>
         <TouchableOpacity
           onPress={() => navigation.navigate("NavigateCard")}
-          style={tw`absolute top-3 left-5 z-50 p-3 rounded-full`}
+          style={tw`absolute left-5 z-50 pb-5 rounded-full -mt-1`}
         >
           <Icon name="chevron-left" type="fontawesome" />
         </TouchableOpacity>
-        <Text style={tw`text-center py-5 text-xl`}>Select a Ride</Text>
+
+        <TouchableOpacity
+          style={tw`bg-black py-3 w-60 ml-auto mr-auto object-center mb-5 -mt-5`}
+        >
+          <Text style={tw`text-center text-white text-xl`}>
+            Choose {selected?.title}
+          </Text>
+        </TouchableOpacity>
       </View>
 
       <FlatList
@@ -69,7 +76,7 @@ const RideOptionsCard = () => {
           </TouchableOpacity>
         )}
       />
-    </View>
+    </SafeAreaView>
   );
 };
 
