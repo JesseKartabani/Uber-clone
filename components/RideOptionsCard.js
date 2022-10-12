@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import tw from "twrnc";
@@ -45,9 +45,16 @@ const RideOptionsCard = () => {
       <FlatList
         data={data}
         keyExtractor={(item) => item.id}
-        renderItem={({ item }) => (
+        renderItem={({ item: { id, title, multiplier, image }, item }) => (
           <TouchableOpacity>
-            <Text>Car</Text>
+            <Image
+              style={{
+                width: 100,
+                height: 100,
+                resizeMode: "contain",
+              }}
+              source={{ uri: image }}
+            />
           </TouchableOpacity>
         )}
       />
