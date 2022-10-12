@@ -6,6 +6,27 @@ import { Icon } from "@rneui/base";
 import { useNavigation } from "@react-navigation/native";
 import { FlatList } from "react-native-gesture-handler";
 
+const data = [
+  {
+    id: "Uber-X-1",
+    title: "UberX",
+    multiplier: 1,
+    image: "https://links.papareact.com/3pn",
+  },
+  {
+    id: "Uber-XL-2",
+    title: "UberXL",
+    multiplier: 1.2,
+    image: "https://links.papareact.com/5w8",
+  },
+  {
+    id: "Uber-LUX-3",
+    title: "UberX",
+    multiplier: 1.75,
+    image: "https://links.papareact.com/7pf",
+  },
+];
+
 const RideOptionsCard = () => {
   const navigation = useNavigation();
 
